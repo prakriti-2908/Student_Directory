@@ -63,9 +63,22 @@ function sortByMarks() {
 }
 
 function sortByPassing() {
-  const passingData = studentsData.filter(student => student.passing);
-  displayStudents(passingData);
+  const sortedData = [...studentsData].sort((a, b) => {
+    // Sort by passing status first
+    if (a.passing && !b.passing) {
+      return -1; // a comes before b
+    } else if (!a.passing && b.passing) {
+      return 1; // b comes before a
+    } else {
+      // If passing status is the same, sort by full name
+      const fullNameA = `${a.first_name} ${a.last_name}`;
+      const fullNameB = `${b.first_name} ${b.last_name}`;
+      return fullNameA.localeCompare(fullNameB);
+    }
+  });
+  displayStudents(sortedData);
 }
+
 
 function sortByClass() {
   const sortedData = [...studentsData].sort((a, b) => a.class-b.class);
