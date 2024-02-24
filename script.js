@@ -99,6 +99,8 @@ function displayGenderTables(femaleStudents, maleStudents) {
 }
 
 function generateGenderTable(students, title) {
+  const tableBody = document.querySelector('#studentTable tbody');
+  tableBody.innerHTML = '';
   let tableHTML = `<h2 style="margin-left: 2.5vw;">${title}</h2>`;
   tableHTML += `<table  border="1">
                   <thead>
