@@ -103,7 +103,7 @@ function generateGenderTable(students, title) {
   tableHTML += `<table  border="1">
                   <thead>
                     <tr>
-                      <th>Serial No.</th>
+                      <th>Id</th>
                       <th>Name</th>
                       <th>Gender</th>
                       <th>Marks</th>
