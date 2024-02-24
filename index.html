@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Information</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="searchContainer">
+    
+<input type="text" id="searchInput" placeholder="Search">
+<button class="button" id="searchBtn" onclick="filterTable()">Search</button>
+</div>
+
+<div class="flex-container">
+  <button class="button" onclick="sortByName('asc')">Sort A->Z</button>
+  <button class="button" onclick="sortByName('desc')">Sort Z->A</button>
+  <button class="button" onclick="sortByMarks()">Sort by Marks</button>
+  <button class="button" onclick="sortByPassing()">Sort by Passing</button>
+  <button class="button" onclick="sortByClass()">Sort by Class</button>
+  <button class="button" onclick="sortByGender()">Sort by Gender</button>
+</div>
+
+<div id="femaleStudentsTable"></div>
+<div id="maleStudentsTable"></div>
+
+<table id="studentTable" border="1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Marks</th>
+      <th>Class</th>
+      <th>Passing</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
